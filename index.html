@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Order Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="order-container">
+        <h2>Order Your Meal</h2>
+        <form id="orderForm" onsubmit="return validateOrderForm()">
+            <!-- Name Field -->
+            <label for="customerName">Name:</label>
+            <input type="text" id="customerName" name="customerName">
+            <small class="error" id="nameError"></small>
+
+            <!-- Contact Field -->
+            <label for="contact">Contact Number:</label>
+            <input type="text" id="contact" name="contact">
+            <small class="error" id="contactError"></small>
+
+            <!-- Email Field -->
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+            <small class="error" id="emailError"></small>
+
+            <!-- Order Field -->
+            <label for="orderDetails">Order Details:</label>
+            <textarea id="orderDetails" name="orderDetails" rows="3" placeholder="E.g., 2 pizzas, 1 pasta..."></textarea>
+            <small class="error" id="orderError"></small>
+
+            <!-- Address Field -->
+            <label for="address">Delivery Address:</label>
+            <textarea id="address" name="address" rows="2"></textarea>
+            <small class="error" id="addressError"></small>
+
+            <!-- Submit Button -->
+            <button type="submit">Place Order</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
